@@ -8,9 +8,38 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style type="text/css">
+    body
+      {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url('farm4.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-attachment: fixed;
+        position: relative;
+      }
+    </style>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;600&display=swap');
+      h1{
+        font-family: 'Pacifico', cursive;
+      }
+
+      p{
+        font-size: 25px;
+        font-family: 'Raleway', sans-serif;
+      }
+      
+      h3{
+        font-weight: 600;
+        font-family: 'Raleway', sans-serif;
+      }
+    </style>
   </head>
 
   <body>
+    <%= render 'layouts/navigation' %>
     <%= yield %>
   </body>
 </html>
